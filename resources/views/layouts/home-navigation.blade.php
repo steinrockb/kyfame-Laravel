@@ -1,5 +1,5 @@
-<section>
-    {{-- style="background-image: url('assets/kyfame_bg.png'); background-repeat: no-repeat; background-size: cover;height: 530px;"> --}}
+<section
+    style="background-image: url('assets/kyfame_bg.png'); background-repeat: no-repeat; background-size: cover;height: 530px;">
     <div class="container-fluid">
         <nav x-data="{ open: false }" class="">
             <div class="relative">
@@ -50,8 +50,7 @@
                             </div>
                         </nav>
                         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
-                                class="navy">
+                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                                 {{ __('Sign In') }}
                             </x-nav-link>
                             <x-nav-link :href="route('register')"
@@ -84,17 +83,16 @@
                     <div class="pt-4 pb-1 border-t border-gray-200">
                         <div class="flex items-center px-4">
                             <div class="flex-shrink-0">
-                                <x-responsive-nav-link :href="URL('dashboard')" class="navy"
+                                <x-responsive-nav-link :href="URL('dashboard')"
                                     :active="request()->routeIs('dashboard')">
                                     {{ __('Sign In') }}
-                                </x-responsive-nav-link>
+                                    </x-nav-link>
                             </div>
                             <div class="flex-shrink-0">
                                 <x-responsive-nav-link :href="route('dashboard')"
                                     class=" btn ml-8 whitespace-nowrap inline-flex items-center justify-center  border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-navy hover:bg-mint">
                                     {{ __('Sign Up') }}
-
-                                </x-responsive-nav-link>
+                                    </x-nav-link>
                             </div>
                         </div>
                     </div>

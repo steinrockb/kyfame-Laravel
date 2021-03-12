@@ -23,8 +23,17 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('application', function(){
+        return view('userApplication.application');
+})->middleware(['auth'])->name('application');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('/application', function(){
+        return view('auth.application');
+})->middleware(['auth'])->name('application');
+
 
 require __DIR__.'/auth.php';
