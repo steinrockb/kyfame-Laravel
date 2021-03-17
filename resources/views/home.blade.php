@@ -1,4 +1,5 @@
 <x-homepage-layout>
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('home') }}
@@ -77,11 +78,11 @@
         </div>
     </div>
 
-    <section class="bg-dark p-5 mt-5">
+    <section class="bg-light-grey p-5 mt-5">
         <div class="container">
             <div class="row ">
                 <div class="col">
-                    <h1 style="text-align: center" class="text-white" ;>Training Offered</h1>
+                    <h1 style="text-align: center" class="navy" ;>Training Offered</h1>
                 </div>
                 <div class="col yellow">
                     <h4> Along with core subjects the program also includes:
@@ -91,7 +92,7 @@
             <div class="row">
                 <div class="col-sm text-center ">
                     <div class="d-inline-flex p-3">
-                        <ul class=" text-white">
+                        <ul class=" navy">
                             <li class="mb-1"><i class="bi bi-tools mint"></i> Electricity</li>
                             <li class="mb-1"><i class="bi bi-tools mint"></i> Robotics</li>
                             <li class="mb-1"><i class="bi bi-tools mint"></i> Fluid Power</li>
@@ -100,7 +101,7 @@
                     </div>
 
                     <div class="d-inline-flex p-3">
-                        <ul class="text-white">
+                        <ul class="navy">
                             <li class="mb-1"><i class="bi bi-tools mint"></i> Fabrication</li>
                             <li class="mb-1"><i class="bi bi-tools mint"></i> Welding</li>
                             <li class="mb-1"><i class="bi bi-tools mint"></i> Hydraulics</li>
@@ -109,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm text-white">
+                <div class="col-sm navy">
                     <ul>
                         <li class="mb-1">
                             <i class="bi bi-cone-striped yellow"></i> Safety
@@ -129,7 +130,7 @@
         </div>
     </section>
 
-    <section class="bg-blue  border-b-2 border-dark">
+    <section class="bg-white  border-b-2 border-dark">
         <div class="container p-3">
             {{-- <p><a href="sponsers" class="font-bold mt-2">Our Sponsers:</a></p> --}}
             <div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">

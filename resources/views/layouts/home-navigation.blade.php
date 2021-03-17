@@ -1,6 +1,6 @@
 <section
-    style="background-image: url('assets/kyfame_bg.png'); background-repeat: no-repeat; background-size: cover;height: 530px;">
-    <div class="container-fluid">
+    style="background-image: url('assets/home-nav-bg.png'); background-repeat: no-repeat; background-size: cover;height: 530px;">
+    <div class="container-fluid" style="background: rgba(255, 255, 255, 0.5);">
         <nav x-data="{ open: false }" class="">
             <div class="relative">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6">

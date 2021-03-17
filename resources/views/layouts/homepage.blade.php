@@ -37,8 +37,8 @@
                 {{ $slot }}
             </main>
         </div>
-        <footer class=" bg-dark" ;>
-            <div class="container p-4 text-white">
+        <footer class=" bg-light-grey" ;>
+            <div class="container p-4 navy">
                 <div class="row">
                     <div class="col-5">
                         <h4>External Links</h4>

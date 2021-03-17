@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class contact_app extends Authenticatable
 {
     use HasFactory, Notifiable;
 
@@ -17,31 +17,35 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'streetAddress',
+        'address2',
+        'city',
+        'state',
+        'zip',
+        'primaryPhone',
+        'altPhone',
+           
+ 
         
+               
     ];
-  public function student_application()
+
+     public function studentApplication()
     {
-        return $this->hasOne(student_application::class);
+        return $this->belongsTo(studentApplication::class);
     }
+  
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+ 
 
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    
 }
