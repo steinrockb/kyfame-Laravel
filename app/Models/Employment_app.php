@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Employment_app extends Model
 {
     use HasFactory;
+
+           protected $fillable = [
+               
+      'employerName',
+      'employerPhone',
+      'employmentStart',
+      'employmentEnd',
+      'reasonForLeaving',
+      'completedDate',
+      'studentApplication_id',
+    ];
+
+         public function Student_application()
+    {
+        return $this->belongsTo(Student_application::class);
+    }
+
+
 }

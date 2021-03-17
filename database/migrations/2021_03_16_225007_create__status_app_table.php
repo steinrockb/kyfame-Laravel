@@ -17,12 +17,11 @@ class CreateStatusAppTable extends Migration
             $table->id();
             $table->timestamps();
             $table->boolean('under-18');
-            $table->boolean('confirmed');
             $table->boolean('authorizedInUS');
             $table->string('levelOfEducation');
             $table->boolean('RelativeSponsers');
             $table->boolean('WorkForSponser');
-            $table->boolean('EmployedWithSponser');            
+            $table->string('EmployedWithSponser');            
             $table->foreignId('studentApplication_id')->constrained();
         });
     }
