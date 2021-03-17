@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentApplicationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,24 +18,22 @@ Route::view('/students', 'students');
 Route::view('/sponsors', 'sponsors'); 
 Route::view('/employers','employers');
 
-
-
-
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('application', function(){
-        return view('userApplication.application');
-})->middleware(['auth'])->name('application');
+Route::get('userApplication.application' ,[StudentApplicationController::class, 'index']
+  )->middleware(['auth'])->name('application');
 
+  Route::get('userApplication.application' ,[StudentApplicationController::class, 'create']
+  )->middleware(['auth'])->name('application.create');
+  
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/application', function(){
-        return view('auth.application');
-})->middleware(['auth'])->name('application');
+
+
 
 
 require __DIR__.'/auth.php';

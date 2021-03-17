@@ -7,10 +7,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class contact_app extends Authenticatable
+class StudentApplication extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    function StudentApplication() {
+        $user_id = Auth::user()->id;
+
+    }
     /**
      * The attributes that are mass assignable.
      *
