@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/individual_sponsors', function () {
+    return view('individual_sponsors');
+});
+
 /* Route::get('userApplication.application' ,[StudentApplicationController::class, 'index']
   )->middleware(['auth'])->name('application');
 
