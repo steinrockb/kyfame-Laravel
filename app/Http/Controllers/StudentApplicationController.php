@@ -14,7 +14,7 @@ class StudentApplicationController extends Controller
 {
     
    
-        public function __contruct()
+        public function __construct()
         {
             $user = Auth::user();
             $application = new StudentApplication();

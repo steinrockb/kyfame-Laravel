@@ -1,12 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
     "\\database",
     "\\database\\migrations",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\components"
+    "\\resources\\views\\components",
+    "\\resources\\views\\userApplication"
   ],
-  "SelectedNode": "\\resources\\views\\components\\dropdown.blade.php",
+  "SelectedNode": "\\resources\\views\\home.blade.php",
   "PreviewInSolutionExplorer": false
 }

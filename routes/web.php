@@ -22,11 +22,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('userApplication.application' ,[StudentApplicationController::class, 'index']
+/* Route::get('userApplication.application' ,[StudentApplicationController::class, 'index']
   )->middleware(['auth'])->name('application');
 
   Route::get('userApplication.application' ,[StudentApplicationController::class, 'create']
-  )->middleware(['auth'])->name('application.create');
+  )->middleware(['auth'])->name('application.create');  */
   
 Route::get('/dashboard', function () {
     return view('dashboard');

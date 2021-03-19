@@ -89,7 +89,7 @@
                                     </x-nav-link>
                             </div>
                             <div class="flex-shrink-0">
-                                <x-responsive-nav-link :href="route('dashboard')"
+                                <x-responsive-nav-link :href="route('register')"
                                     class=" btn ml-8 whitespace-nowrap inline-flex items-center justify-center  border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-navy hover:bg-mint">
                                     {{ __('Sign Up') }}
                                     </x-nav-link>

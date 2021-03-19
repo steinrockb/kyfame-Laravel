@@ -21,7 +21,7 @@ class CreateStatusAppTable extends Migration
             $table->string('levelOfEducation');
             $table->boolean('RelativeSponsers');
             $table->boolean('WorkForSponser');
-            $table->string('EmployedWithSponser');            
+            $table->string('EmployedWithSponser');
             $table->foreignId('studentApplication_id')->constrained();
         });
     }
