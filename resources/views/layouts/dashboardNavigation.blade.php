@@ -19,9 +19,9 @@
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('application')" :active="request()->routeIs('application')">
+                        {{-- <x-nav-link :href="route('application')" :active="request()->routeIs('application')">
                             {{ __('Application') }}
-                        </x-nav-link>
+                        </x-nav-link> --}}
                     </div>
                 </div>
 
@@ -65,8 +65,8 @@
                         </div>
 
                         <div class="ml-3">
-                            <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                            <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                            <div class="font-medium text-base text-gray-800">{{ Auth::user()->firstName }}</div>
+                            <div class="font-medium text-sm text-gray-500">{{ Auth::user()->lastName }}</div>
                         </div>
                     </div>
 
