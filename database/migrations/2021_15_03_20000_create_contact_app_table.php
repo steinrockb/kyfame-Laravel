@@ -13,15 +13,16 @@ class CreateContactAppTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_app', function (Blueprint $table) {
+        Schema::create('contact_apps', function (Blueprint $table) {
             $table->id();
             $table->string('streetAddress');
-            $table->string('address2')->unique();
-            $table->string('city')->unique();
+            $table->string('address2');
+            $table->string('city');
             $table->string('state');
             $table->string('zip');
-            $table->string('primaryPhone')->unique();
-            $table->string('altPphone')->unique();
+            $table->string('primaryPhone');
+            $table->string('altPphone');
+            
             $table->foreignId('studentApplication_id')->constrained();         
             
         });

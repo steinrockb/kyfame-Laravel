@@ -12,16 +12,20 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/utils.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+        {{-- <link rel="stylesheet" href="{{ asset('css/utils.css') }}"> --}}
+       
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
         <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        <script src="{{ asset('js/jquery.js') }}">
         </script>
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="{{ asset('js/application.js')}}"></script>
+        <script src="{{ asset('js/bootstrap/bootstrap.js')}}"></script>
+        {{-- <script src="{{ asset('js/application.js')}}"></script> --}}
+        <script src="{{ asset('js/bootstrap/bootstrap.js')}}"></script>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
@@ -54,24 +58,24 @@
                 <div class="row">
                     <div class="col-5">
                         <h4>External Links</h4>
-                        <ul>
-                            <li> <a href="https://jefferson.kctcs.edu/education-training/program-finder/kyfame.aspx">JCTC
-                                    FAME</a></li>
-                            <li> <a
-                                    href="https://students.kctcs.edu/psc/stdsaprd/EMPLOYEE/SA/c/COMMUNITY_ACCESS.K_OLA_LANDING_FL.GBL?&Campus=JFC&">Apply
-                                    to JCTC</a></li>
-                            <li> <a href="https://fame-usa.com/">USA FAME</a></li>
-                            <li><a href=""></a></li>
-                        </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="https://jefferson.kctcs.edu/education-training/program-finder/kyfame.aspx">JCTC
+                                FAME</a></li>
+                            <li class="list-group-item"><a href="https://fame-usa.com/">USA FAME</a></li>
+                            <li class="list-group-item"><a href="">Extern Link</a></li>
+                         
+                        </ul>                      
                     </div>
+
                     <div class="col-4">
-                        <h4>Site Links</h4>
-                        <ul>
-                            <li><a href="students">For Students</a></li>
-                            <li><a href="sponsers">For Sponsers</a></li>
-                            <li><a href="employers">For Employers</a></li>
+                        <h4>Site Links</h4>                    
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="students">For Students</a></li>
+                            <li class="list-group-item"><a href="sponsers">For Sponsers</a></li>
+                            <li class="list-group-item"><a href="employers">For Employers</a></li>
                         </ul>
                     </div>
+
                     <div class="col-3">
                         <h4>Contact Us</h4>
                         <address>
@@ -83,12 +87,11 @@
                         </address>
                     </div>
                 </div>
+            </div>\
 
-            </div>
             <div class="p-2 bg-dark">
                 <p class="text-white text-center">&copy; Copyright 2021 GLKYFAME</p>
             </div>
         </footer>
     </body>
-
 </html>

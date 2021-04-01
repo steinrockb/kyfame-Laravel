@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmploymentHistoryTable extends Migration
+class CreateEmploymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEmploymentHistoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('employment_history', function (Blueprint $table) {
+        Schema::create('employment_apps', function (Blueprint $table) {
             $table->id();
             $table->string('employerName');
             $table->string('employerPhone');
@@ -21,7 +21,7 @@ class CreateEmploymentHistoryTable extends Migration
             $table->date('employmentStart');
             $table->date('employmentEnd');
             $table->string('reasonForLeaving');
-            $table->timestamp('completedDate');
+          
             $table->foreignId('studentApplication_id')->constrained();
         });
     }

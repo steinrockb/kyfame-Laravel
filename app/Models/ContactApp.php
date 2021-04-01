@@ -2,37 +2,41 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class ContactApp extends Authenticatable
+
+
+class ContactApp extends Model
 {
-    use HasFactory, Notifiable;
+    use HasFactory; 
+
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    public $timestamps = false;
+
     protected $fillable = [
+        
         'streetAddress',
         'address2',
         'city',
         'state',
         'zip',
         'primaryPhone',
-        'altPhone',
-           
- 
-        
-               
+        'altPhone',       
+        'studentApplication_id',              
     ];
-
+    
+    protected $guarded = [];
+    
      public function studentApplication()
     {
-        return $this->belongsTo(studentApplication::class);
+        return $this->belongsTo(StudentApplication::class);
     }
   
     /**

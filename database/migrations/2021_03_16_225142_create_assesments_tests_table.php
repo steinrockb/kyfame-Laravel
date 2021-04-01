@@ -13,9 +13,9 @@ class CreateAssesmentsTestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('assesments_tests', function (Blueprint $table) {
+        Schema::create('assesments_apps', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+        
             $table->boolean('ACT');
             $table->string('ACTenglishScore');
             $table->string('ACTreadingScore');
@@ -38,6 +38,7 @@ class CreateAssesmentsTestsTable extends Migration
             $table->string('highSchoolActivities');
             $table->string('technicalProgrrams');
             $table->string('additionalComments');
+            
             $table->foreignId('studentApplication_id')->constrained();
         });
     }

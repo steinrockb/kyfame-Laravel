@@ -13,16 +13,20 @@ class CreateStudentApplicationTable extends Migration
      */
     public function up()
     {
-        Schema::create('studentApplications', function (Blueprint $table) {
+        Schema::create('student_applications', function (Blueprint $table) {
             $table->id();
             $table->timestamp('start_date');          
             $table->string('transcriptPath');
             $table->string('essay');
             $table->string('CurrentSection');
+            
+            $table->foreignId('user_id')->constrained();
+        });
+
         
         
             
-        });
+        
     }
 
     /**
