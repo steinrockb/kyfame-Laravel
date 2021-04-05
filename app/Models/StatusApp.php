@@ -7,17 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class StatusApp extends Model
 {
+    public $timestamps = false; 
     use HasFactory;
-
-    protected $fillable = [        
-        'under-18',
-        'authorizedInUS',
-        'levelOfEducation',
-        'RelativeSponsers',
-        'WorkForSponser',
-        'EmployedWithSponser',
-        'studentApplication_id',        
-    ];
+   protected $guarded = [];
+    // protected $fillable = [        
+    //     'under-18',
+    //     'authorizedInUS',
+    //     'levelOfEducation',
+    //     'RelativeSponsers',
+    //     'WorkForSponser',
+    //     'EmployedWithSponser',
+    //     'studentApplication_id',        
+    // ];
     
     
            public function Student_application()

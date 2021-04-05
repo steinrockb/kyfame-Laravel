@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateStudentApplicationsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('student_applications', function (Blueprint $table) {
+            $table->id();
+            $table->timestamp('start_date');          
+            $table->string('transcriptPath');
+            $table->string('essay');
+            $table->string('CurrentSection');
+            
+            $table->foreignId('user_id')->constrained();
+        });
+
+        
+        
+            
+        
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('studentApplication');
+    }
+}

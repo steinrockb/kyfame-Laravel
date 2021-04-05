@@ -8,17 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class EmploymentApp extends Model
 {
     use HasFactory;
-
-           protected $fillable = [
+    public $timestamps = false;
+    protected $guarded = [];
+    //        protected $fillable = [
                
-      'employerName',
-      'employerPhone',
-      'employmentStart',
-      'employmentEnd',
-      'reasonForLeaving',
-      'completedDate',
-      'studentApplication_id',
-    ];
+    //   'employerName',
+    //   'employerPhone',
+    //   'employmentStart',
+    //   'employmentEnd',
+    //   'reasonForLeaving',
+    //   'completedDate',
+    //   'studentApplication_id',
+    // ];
 
          public function Student_application()
     {

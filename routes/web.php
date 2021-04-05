@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentApplicationController;
+use App\Http\Controllers;
+use App\Http\Controllers\ApplicationController;
 
 
 /*
@@ -14,6 +15,7 @@ use App\Http\Controllers\StudentApplicationController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::view('/students', 'students'); 
 Route::view('/sponsors', 'sponsors'); 
 Route::view('/employers','employers');
@@ -22,18 +24,18 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('userApplication.application' ,[StudentApplicationController::class, 'index']
-  )->middleware(['auth'])->name('application');
+Route::get('/form', [ApplicationController::class, 'index'])
+    ->name('form');
 
-  Route::get('userApplication.application' ,[StudentApplicationController::class, 'create']
-  )->middleware(['auth'])->name('application.create');
-  
+Route::post('/form', [ApplicationController::class, 'formSubmit'])->name('form.formSubmit');
+Route::post('/formStatus', [ApplicationController::class, 'formStatus'])->name('form.formStatus');
+Route::post('/formEmployment', [ApplicationController::class, 'formEmployment'])->name('form.formEmployment');
+Route::post('/formAssesments', [ApplicationController::class, 'formAssesments'])->name('form.formAssesments');
+Route::post('/formEssay', [ApplicationController::class, 'formEssay'])->name('form.formEssay');
+Route::post('/formTranscript', [ApplicationController::class, 'formTranscript'])->name('form.formTranscript');
+   
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-
-
-
-
 
 require __DIR__.'/auth.php';

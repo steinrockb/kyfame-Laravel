@@ -17,6 +17,7 @@ class CreateSponsorsTable extends Migration
             $table->id();
             $table->string('name');          
             $table->timestamps();
+            
         });
     }
 

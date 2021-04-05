@@ -2,15 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class StudentApplication extends Authenticatable
+class StudentApplication extends Model
 {
-    use HasFactory, Notifiable;
-
+    use HasFactory;
+    //protected $table = 'student_applications';
+    // const CREATED_AT = 'name_of_created_at_column';
+    // const UPDATED_AT = 'name_of_updated_at_column';
+    
+    public $timestamps = false; 
+    
     function StudentApplication() {
         $user_id = Auth::user()->id;
 
@@ -20,38 +25,37 @@ class StudentApplication extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-      'id',
-      'start_date',
-      'completedDate',
-      'transcriptPath',
-      'essay',
-      'CurrentSection',
-      
+    // protected $fillable = [
+    //   'id',
+    //   'start_date',
+    //   'complete_date',
+    //   'transcript_path',
+    //   'essay',
+    //   'current_section',   
+    //   'user_id'              
+    // ];
 
-               
-    ];
-
-     public function user()
+    protected $guarded = [];
+    
+    public function user()
     {
         return $this->belongsTo(user::class);
-    }
-    
-        public function contact_app()
+    }    
+        public function contactApp()
     {
-        return $this->hasOne(contact_app::class);
+        return $this->hasOne(ContactApp::class);
     }
-          public function employment_app()
+          public function employmentApp()
     {
-        return $this->hasOne(employment_app::class);
+        return $this->hasMany(EmploymentApp::class);
     }
-          public function Assesment_app()
+          public function assesmentApp()
     {
-        return $this->hasOne(Assesment_app::class);
+        return $this->hasOne(AssesmentApp::class);
     }
-          public function Status_app()
+          public function statusApp()
     {
-        return $this->hasOne(Status_app::class);
+        return $this->hasOne(StatusApp::class);
     }
 
 }

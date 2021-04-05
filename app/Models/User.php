@@ -21,11 +21,12 @@ class User extends Authenticatable
         'lastName',
         'email',
         'password',
+        'studentApplication_id',
         
     ];
-  public function student_application()
+  public function studentApp()
     {
-        return $this->hasOne(student_application::class);
+        return $this->hasOne(StudentApplication::class);
     }
     /**
      * The attributes that should be hidden for arrays.
