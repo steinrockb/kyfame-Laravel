@@ -9,7 +9,7 @@
             </div>
 
             <div class="col">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->firstName }}</div>
+                <div class="font-medium text-base text-gray-800">{{ Auth::user()->first_Name }}</div>
             </div>
         </div>
     </x-slot>
@@ -82,10 +82,13 @@
                                     <div class="form-nav">
                                       <button type="button" class="prevBtn btn btn-info float-left">Back</button>
                                       <button type="button" id="contactBtn" class="nextBtn btn btn-info float-right"data-section="1">Next</button>
-                                      <button type="submit" class="btn btn-success float-right" data-section="1">Submit</button>
                                   </div>
                                 </form>
                         </div>
+
+
+
+
                         <!-- Status INFORMATION FORM -->
                         <!-- FORM ROW 1 -->
                         <div class="form-section toggle" id="section2" style="display:none;">
@@ -123,7 +126,7 @@
                                    <div class="m-3" id="levelOfEducation">
                                         <div class="form-check">
                                             <input type="radio" class="section-data form-check-input levelOfEducation" id="HsSenior" name="levelOfEducation" value="HS Senior" checked>
-                                            <label class="form-check-label" for="HsSenior">HS Senior"</label>
+                                            <label class="form-check-label" for="HsSenior">HS Senior</label>
                                         </div>
 
                                         <div class="form-check">
@@ -152,14 +155,14 @@
                                         </div>
                                    </div>                               
                              
-                                   <h5 for="RelativesAtSponsors">Do you have an relatives working for sponsoring companies?"</h5>
+                                   <h5 for="RelativesAtSponsors">Do you have an relatives working for sponsoring companies?</h5>
                                    <div class="m-3" id="RelativesAtSponsors">
                                     <div class="form-check">
                                         <label class="form-check-label" for="relativesYes">Yes</label>
-                                        <input type="radio" class="section-data form-check-input" id="relativesYes" name="RelativeSponsors" value="1">
+                                        <input type="radio" class="section-data form-check-input" id="relativesYes" name="relativeSponsors" value="1">
 
                                         <label class="form-check-label" for="relativesNo">No</label>
-                                        <input type="radio" class="section-data form-check-input" id="relativesNo" name="RelativeSponsors" value="0" checked>
+                                        <input type="radio" class="section-data form-check-input" id="relativesNo" name="relativeSponsors" value="0" checked>
                                     </div>
                                   </div>
 
@@ -167,25 +170,24 @@
                                   <div class="m-3" id="employedWithSponsor">
                                     <div class="form-check">
                                         <label class="form-check-label" for="workForSponsor">Yes</label>
-                                        <input type="radio" class="section-data form-check-input" id="workForSponsorYes" name="WorkForSponsor" value="1">
+                                        <input type="radio" class="section-data form-check-input" id="workForSponsorYes" name="workForSponsor" value="1">
                                     </div>
 
                                     <div class="form-check">
                                          <label class="form-check-label" for="workForSponsorNo">No</label>
-                                        <input type="radio" class="section-data form-check-input" id="workForSponsorNo" name="WorkForSponsor" value="0">
+                                        <input type="radio" class="section-data form-check-input" id="workForSponsorNo" name="workForSponsor" value="0">
                                     </div>
                                 </div>                               
 
                                  <div class="m-3" id="SponsorNames">
-                                   <label for="SponsorNames">If you answered yes to the previous questions please enter those sponor names here.</label>
-                                    <input id="SponsorNames" class="form-control" type="text" name="sponsor_names"
+                                   <label for="sponsorNames">If you answered yes to the previous questions please enter those sponor names here.</label>
+                                    <input id="sponsorNames" class="form-control" type="text" name="sponsor_names"
                                          autofocus />
                                  </div>
 
                                  <div class="form-nav m-3">
                                     <button type="button" class="prevBtn btn btn-info float-left">Back</button>
-                                    <button type="button" id="statusBtn" class="nextBtn btn btn-info float-right" data-section="2">Next</button>
-                                    <button type="submit" class="btn btn-success float-right" data-section="2">Submit</button>
+                                    <button type="button" id="statusBtn" class="nextBtn btn btn-info float-right" data-section="2">Next</button>                                    
                                  </div>                          
                             </form>
                          </div>
@@ -209,7 +211,6 @@
                             <div class="form-nav">
                                 <button type="button" class="prevBtn btn btn-info float-left">Back</button>
                                 <button type="button" id="employmentBtn" class="btn btn-info float-right" data-section="3">Next</button>
-                                <button type="submit" class="btn btn-success float-right" data-section="3">Submit</button>
                             </div>
                         </div>
 
@@ -236,7 +237,7 @@
                                         <h5 for="">ACT Scores</h5> 
                                         <div class="row">
                                             <div class="col">  
-                                                <input type="text" class="form-control" id="ACTenglishScore" name="ACTenglishScore" placeholder="Englih"/>
+                                                <input type="text" class="form-control" id="ACTenglishScore" name="ACTenglishScore" placeholder="English"/>
                                             </div>
                                             <div class="col">
                                                 <input type="text" class="form-control" id="ACTreadingScore" name="ACTreadingScore" placeholder="Reading"/>
@@ -366,8 +367,8 @@
                                         </div>
 
                                         <div class="m-3">
-                                            <label for="technicalProgrrams">List any other technical programs attended</label>
-                                            <input type="text" class="form-control" id="technicalProgrrams" name="technicalProgrrams" placeholder="">
+                                            <label for="technicalPrograms">List any other technical programs attended</label>
+                                            <input type="text" class="form-control" id="technicalPrograms" name="technicalPrograms" placeholder="">
                                         </div>
                                         <div class="m-3">
                                             <label for="additionalComments">Additional Comments</label>
@@ -377,7 +378,6 @@
                                         <div class="form-nav m-3">
                                             <button type="button" class="prevBtn btn btn-info float-left">Back</button>
                                             <button type="button" id="assesmentBtn" class=" btn btn-info float-right" data-section="4">Next</button>
-                                            <button type="submit" class="btn btn-success float-right" data-section="4">Submit</button>
                                         </div>
                                 
                             </form>
@@ -396,7 +396,6 @@
                                 <div  class="form-nav">
                                     <button type="button" class="prevBtn btn btn-info float-left">Back</button>
                                     <button type="button" id="essayBtn" class="nextBtn btn btn-info float-right" data-section="5">Next</button>
-                                    <button type="submit" class="btn btn-success float-right" data-section="5">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -416,7 +415,6 @@
                                  <div class="form-nav">
                                     <button type="button" class="prevBtn btn btn-info float-left">Back</button>
                                     <button type="button" id="transcriptBtn" class="nextBtn btn btn-info float-right" data-section="6">Next</button>
-                                    <button type="submit" class="btn btn-success float-right" data-section="6">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -458,7 +456,7 @@
                                    be acting as a program ambassador or contributing to community service projects.*
                                 </label>
                             </div>
-                            <button class="finsih" type="submit">Submit</button>
+                            <button class="finish btn btn-success" type="submit">Submit</button>
                         </div>
                     </div>
                </div>          

@@ -16,10 +16,9 @@ class CreateStudentApplicationsTable extends Migration
         Schema::create('student_applications', function (Blueprint $table) {
             $table->id();
             $table->timestamp('start_date');          
-            $table->string('transcriptPath');
-            $table->string('essay');
-            $table->string('CurrentSection');
-            
+            $table->string('transcriptPath')->nullable();
+            $table->string('essay')->nullable();
+            $table->string('CurrentSection')->nullable();            
             $table->foreignId('user_id')->constrained();
         });
 
@@ -36,6 +35,6 @@ class CreateStudentApplicationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('studentApplication');
+        Schema::dropIfExists('student_applications');
     }
 }

@@ -60,7 +60,7 @@ class ApplicationController extends Controller
                 $contactModel->zip = $request->zip;
                 $contactModel->primaryPhone = $request->primaryPhone;
                 $contactModel->altPhone = $request->altPhone;
-                $contactModel->studentApplication_id = $application->id;
+                $contactModel->student_application_id = $application->id;
 
                 $contactModel->save();
                 return response()->json(['success' => true]);
@@ -81,8 +81,8 @@ class ApplicationController extends Controller
                     'under_18' => 'required|max:255',
                     'authorizedInUS' => 'required|max:255',
                     'levelOfEducation' => 'required|max:255',
-                    'RelativeSponsors' => 'required|max:255',
-                    'WorkForSponsor' => 'required|max:255',
+                    'relativeSponsors' => 'required|max:255',
+                    'workForSponsor' => 'required|max:255',
                     'sponsor_names' => 'max:255',
 
                 ]);
@@ -90,10 +90,10 @@ class ApplicationController extends Controller
                 $status->under_18 = $request->under_18;
                 $status->authorizedInUS = $request->authorizedInUS;
                 $status->levelOfEducation = $request->levelOfEducation;
-                $status->RelativeSponsors = $request->RelativeSponsors;
-                $status->WorkForSponsor = $request->WorkForSponsor;
+                $status->relativeSponsors = $request->relativeSponsors;
+                $status->workForSponsor = $request->workForSponsor;
                 $status->sponsor_names = $request->sponsor_names;
-                $status->studentApplication_id = $application->id;
+                $status->student_application_id = $application->id;
 
                 $status->save();
                 return response()->json(['success' => true]);
@@ -127,7 +127,7 @@ class ApplicationController extends Controller
                 $employmentModel->employmentStart = $request->employmentStart;
                 $employmentModel->employmentEnd = $request->employmentEnd;
                 $employmentModel->reasonForLeaving = $request->reasonForLeaving;
-                $employmentModel->studentApplication_id = $application->id;
+                $employmentModel->student_application_id = $application->id;
 
                 $employmentModel->save();
 
@@ -173,7 +173,7 @@ class ApplicationController extends Controller
                 //     'highSchoolAttended' => 'required|max:255',
                 //     'GPA' => 'required|max:255',
                 //     'highSchoolActivities' => 'max:255',
-                //     'technicalProgrrams' => 'max:255',
+                //     'technicalPrograms' => 'max:255',
                 //     'additionalComments' => 'max:255',
                 // ]);
 
@@ -203,9 +203,9 @@ class ApplicationController extends Controller
                 $assesments->highSchoolAttended = $request->highSchoolAttended;
                 $assesments->GPA = $request->GPA;
                 $assesments->highSchoolActivities = $request->highSchoolActivities;
-                $assesments->technicalProgrrams = $request->technicalProgrrams;
+                $assesments->technicalPrograms = $request->technicalPrograms;
                 $assesments->additionalComments = $request->additionalComments;
-                $assesments->studentApplication_id = $application->id;
+                $assesments->student_application_id = $application->id;
 
                 $assesments->save();
                 return response()->json(['success' => true]);
