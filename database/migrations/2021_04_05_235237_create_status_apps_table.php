@@ -16,13 +16,13 @@ class CreateStatusAppsTable extends Migration
         Schema::create('status_apps', function (Blueprint $table) {
             $table->id();
          
-            $table->boolean('under-18');
+            $table->boolean('under_18');
             $table->boolean('authorizedInUS');
             $table->string('levelOfEducation');
-            $table->boolean('relativeSponsers');
-            $table->boolean('workForSponser');
-            $table->string('employedSponser');            
-            $table->foreignId('studentApplication_id')->constrained();
+            $table->boolean('relativeSponsors');
+            $table->boolean('workForSponsor');
+            $table->string('sponsor_names')->nullable();            
+            $table->foreignId('student_application_id')->constrained();
             
         });
     }
@@ -34,6 +34,6 @@ class CreateStatusAppsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_status_app');
+        Schema::dropIfExists('status_apps');
     }
 }

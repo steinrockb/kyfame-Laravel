@@ -22,7 +22,7 @@ class CreateEmploymentAppsTable extends Migration
             $table->date('employmentEnd');
             $table->string('reasonForLeaving');
           
-            $table->foreignId('studentApplication_id')->constrained();
+            $table->foreignId('student_application_id')->constrained();
         });
     }
 
@@ -33,6 +33,6 @@ class CreateEmploymentAppsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employment_history');
+        Schema::dropIfExists('employment_apps');
     }
 }

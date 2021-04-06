@@ -115,11 +115,11 @@ $(document).ready(function () {
         // levelOfEducation: $('#levelOfEducation').val(),
         levelOfEducation: $('input[name=levelOfEducation]:checked').val(),
         // RelativeSponsors: $('#RelativeSponsors').val(),
-        RelativeSponsors: $('input[name=RelativeSponsors]:checked').val(),
+        relativeSponsors: $('input[name=relativeSponsors]:checked').val(),
         // WorkForSponsor: $('#WorkForSponsor').val(),
-        WorkForSponsor: $('input[name=WorkForSponsor]:checked').val(),
+        workForSponsor: $('input[name=workForSponsor]:checked').val(),
           
-        sponsor_names: $('#sponsor_names').val(),
+        sponsor_names: $('#sponsorNames').val(),
         
       },
       dataType: 'json',
@@ -243,7 +243,7 @@ $(document).ready(function () {
         highSchoolAttended: $('#highSchoolAttended').val(),
         GPA: $('#GPA').val(),
         highSchoolActivities: $('#highSchoolActivities').val(),
-        technicalProgrrams: $('#technicalProgrrams').val(),
+        technicalPrograms: $('#technicalPrograms').val(),
         additionalComments: $('#additionalComments').val(),
       },
       dataType: 'json',

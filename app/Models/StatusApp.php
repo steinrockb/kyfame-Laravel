@@ -11,7 +11,7 @@ class StatusApp extends Model
     use HasFactory;
    protected $guarded = [];
     // protected $fillable = [        
-    //     'under-18',
+    //     'under_18',
     //     'authorizedInUS',
     //     'levelOfEducation',
     //     'RelativeSponsers',

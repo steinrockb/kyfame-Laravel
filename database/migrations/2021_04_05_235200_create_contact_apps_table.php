@@ -16,14 +16,14 @@ class CreateContactAppsTable extends Migration
         Schema::create('contact_apps', function (Blueprint $table) {
             $table->id();
             $table->string('streetAddress');
-            $table->string('address2');
+            $table->string('address2')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('zip');
             $table->string('primaryPhone');
-            $table->string('altPphone');
+            $table->string('altPhone')->nullable();
             
-            $table->foreignId('studentApplication_id')->constrained();         
+            $table->foreignId('student_application_id')->constrained();         
             
         });
     }
@@ -35,6 +35,6 @@ class CreateContactAppsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_app');
+        Schema::dropIfExists('contact_apps');
     }
 }
